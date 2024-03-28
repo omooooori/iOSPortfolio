@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -41,6 +42,15 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Browser"/>
                                 <connections>
                                     <segue destination="Cvt-2b-wnT" kind="presentation" id="fNL-cM-8wg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9i-No-ptL">
+                                <rect key="frame" x="168" y="452" width="58" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Map"/>
+                                <connections>
+                                    <segue destination="fVb-c9-bQD" kind="presentation" id="peT-04-G2S"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -146,6 +156,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pW6-rD-5hy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1832.824427480916" y="629.57746478873241"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="tPP-U5-xfo">
+            <objects>
+                <viewController id="fVb-c9-bQD" customClass="MapViewController" customModule="VariousFunctionPlayGround" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nFp-Kc-a0D">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vD7-7t-dgx">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="601"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2T-M2-w6v">
+                                <rect key="frame" x="163" y="717" width="68" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="BACK"/>
+                                <connections>
+                                    <segue destination="byO-rC-1dF" kind="unwind" unwindAction="backToTitleWithSender:" id="8IA-Ft-rmX"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ypf-UJ-uv7">
+                                <rect key="frame" x="84" y="631" width="225" height="32"/>
+                                <segments>
+                                    <segment title="Map"/>
+                                    <segment title="Satellite"/>
+                                    <segment title="Hybrid"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onSegmentChangedWithSender:" destination="fVb-c9-bQD" eventType="valueChanged" id="xt2-uh-gxv"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BWz-iM-UAX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ypf-UJ-uv7" firstAttribute="centerX" secondItem="x2T-M2-w6v" secondAttribute="centerX" id="6CD-Tr-9Hb"/>
+                            <constraint firstItem="vD7-7t-dgx" firstAttribute="top" secondItem="BWz-iM-UAX" secondAttribute="top" id="Gae-9H-Sz7"/>
+                            <constraint firstItem="x2T-M2-w6v" firstAttribute="top" secondItem="Ypf-UJ-uv7" secondAttribute="bottom" constant="55" id="J0g-fH-Ijp"/>
+                            <constraint firstItem="Ypf-UJ-uv7" firstAttribute="top" secondItem="vD7-7t-dgx" secondAttribute="bottom" constant="30" id="Mnt-sf-qd5"/>
+                            <constraint firstItem="vD7-7t-dgx" firstAttribute="trailing" secondItem="BWz-iM-UAX" secondAttribute="trailing" id="Orr-4r-0vo"/>
+                            <constraint firstItem="Ypf-UJ-uv7" firstAttribute="centerX" secondItem="vD7-7t-dgx" secondAttribute="centerX" id="SU1-73-Ws4"/>
+                            <constraint firstItem="Ypf-UJ-uv7" firstAttribute="leading" secondItem="BWz-iM-UAX" secondAttribute="leading" constant="84" id="bpo-CP-Plo"/>
+                            <constraint firstAttribute="bottom" secondItem="Ypf-UJ-uv7" secondAttribute="bottom" constant="180" id="e93-NK-IU1"/>
+                            <constraint firstItem="vD7-7t-dgx" firstAttribute="leading" secondItem="BWz-iM-UAX" secondAttribute="leading" id="mMt-zD-cjA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="vD7-7t-dgx" id="1Ki-zp-eaH"/>
+                        <outlet property="segmentControl" destination="Ypf-UJ-uv7" id="lYp-Up-hNw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iow-Rt-azW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1832.824427480916" y="1348.5915492957747"/>
         </scene>
         <!--Animation View Controller-->
         <scene sceneID="bRH-Jp-fOp">

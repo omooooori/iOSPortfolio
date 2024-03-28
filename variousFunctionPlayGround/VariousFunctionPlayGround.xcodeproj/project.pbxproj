@@ -22,6 +22,8 @@
 		6E3991792BB2519700AF3C06 /* sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E3991782BB2519700AF3C06 /* sample.mp3 */; };
 		6E39917B2BB253E500AF3C06 /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E39917A2BB253E500AF3C06 /* BrowserViewController.swift */; };
 		6EA4B4B82BB5ACFD00865355 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA4B4B72BB5ACFD00865355 /* MapViewController.swift */; };
+		6EA4B4BA2BB5B1DC00865355 /* sample_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EA4B4B92BB5B1DC00865355 /* sample_image.png */; };
+		6EA4B4BC2BB5B25300865355 /* ImageFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA4B4BB2BB5B25300865355 /* ImageFilterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		6E3991782BB2519700AF3C06 /* sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample.mp3; sourceTree = "<group>"; };
 		6E39917A2BB253E500AF3C06 /* BrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewController.swift; sourceTree = "<group>"; };
 		6EA4B4B72BB5ACFD00865355 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		6EA4B4B92BB5B1DC00865355 /* sample_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample_image.png; sourceTree = "<group>"; };
+		6EA4B4BB2BB5B25300865355 /* ImageFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFilterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,12 +122,14 @@
 				6E3991332BB24ACF00AF3C06 /* Assets.xcassets */,
 				6E3991352BB24ACF00AF3C06 /* LaunchScreen.storyboard */,
 				6E3991382BB24ACF00AF3C06 /* Info.plist */,
+				6EA4B4B92BB5B1DC00865355 /* sample_image.png */,
 				6E3991722BB24D1500AF3C06 /* fish.png */,
 				6E3991782BB2519700AF3C06 /* sample.mp3 */,
 				6E3991742BB24FB200AF3C06 /* AnimationViewController.swift */,
 				6E3991762BB2518600AF3C06 /* SoundViewController.swift */,
 				6E39917A2BB253E500AF3C06 /* BrowserViewController.swift */,
 				6EA4B4B72BB5ACFD00865355 /* MapViewController.swift */,
+				6EA4B4BB2BB5B25300865355 /* ImageFilterViewController.swift */,
 			);
 			path = VariousFunctionPlayGround;
 			sourceTree = "<group>";
@@ -252,6 +258,7 @@
 				6E3991372BB24ACF00AF3C06 /* LaunchScreen.storyboard in Resources */,
 				6E3991732BB24D1500AF3C06 /* fish.png in Resources */,
 				6E3991342BB24ACF00AF3C06 /* Assets.xcassets in Resources */,
+				6EA4B4BA2BB5B1DC00865355 /* sample_image.png in Resources */,
 				6E3991322BB24ACD00AF3C06 /* Main.storyboard in Resources */,
 				6E3991792BB2519700AF3C06 /* sample.mp3 in Resources */,
 			);
@@ -280,6 +287,7 @@
 			files = (
 				6E39912F2BB24ACD00AF3C06 /* ViewController.swift in Sources */,
 				6E39917B2BB253E500AF3C06 /* BrowserViewController.swift in Sources */,
+				6EA4B4BC2BB5B25300865355 /* ImageFilterViewController.swift in Sources */,
 				6E39912B2BB24ACD00AF3C06 /* AppDelegate.swift in Sources */,
 				6E39912D2BB24ACD00AF3C06 /* SceneDelegate.swift in Sources */,
 				6E3991752BB24FB200AF3C06 /* AnimationViewController.swift in Sources */,

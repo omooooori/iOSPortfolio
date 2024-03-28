@@ -37,7 +37,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcR-q3-0cD">
                                 <rect key="frame" x="153" y="370" width="87" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Browser"/>
                                 <connections>
@@ -46,11 +46,20 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9i-No-ptL">
                                 <rect key="frame" x="168" y="452" width="58" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Map"/>
                                 <connections>
                                     <segue destination="fVb-c9-bQD" kind="presentation" id="peT-04-G2S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ox-YI-YFW">
+                                <rect key="frame" x="140" y="530" width="113" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Image Filter"/>
+                                <connections>
+                                    <segue destination="e37-ee-pnm" kind="presentation" id="WBU-c5-lHE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -62,6 +71,60 @@
                 <exit id="byO-rC-1dF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="483" y="72"/>
+        </scene>
+        <!--Image Filter View Controller-->
+        <scene sceneID="CyO-rJ-H13">
+            <objects>
+                <viewController id="e37-ee-pnm" customClass="ImageFilterViewController" customModule="VariousFunctionPlayGround" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eKn-mP-udX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample_image.png" translatesAutoresizingMaskIntoConstraints="NO" id="dGD-Tn-eb0">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="642"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TjO-oq-fM2">
+                                <rect key="frame" x="140" y="682" width="113" height="32"/>
+                                <segments>
+                                    <segment title="Mono"/>
+                                    <segment title="Blur"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onSegmentChangedWithSender:" destination="e37-ee-pnm" eventType="valueChanged" id="lyV-Zb-op3"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgD-f7-3Mq">
+                                <rect key="frame" x="162" y="743" width="69" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="BACK"/>
+                                <connections>
+                                    <segue destination="byO-rC-1dF" kind="unwind" unwindAction="backToTitleWithSender:" id="qEE-S3-dbt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XZu-Wb-2x2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dgD-f7-3Mq" firstAttribute="top" secondItem="TjO-oq-fM2" secondAttribute="bottom" constant="30" id="2bf-Sg-CbB"/>
+                            <constraint firstItem="dgD-f7-3Mq" firstAttribute="centerX" secondItem="TjO-oq-fM2" secondAttribute="centerX" id="4R0-uc-qdN"/>
+                            <constraint firstItem="dGD-Tn-eb0" firstAttribute="top" secondItem="XZu-Wb-2x2" secondAttribute="top" id="654-fE-Dep"/>
+                            <constraint firstItem="dGD-Tn-eb0" firstAttribute="centerX" secondItem="eKn-mP-udX" secondAttribute="centerX" id="MU7-lX-AY9"/>
+                            <constraint firstItem="dGD-Tn-eb0" firstAttribute="leading" secondItem="XZu-Wb-2x2" secondAttribute="leading" id="QMa-ve-brq"/>
+                            <constraint firstItem="XZu-Wb-2x2" firstAttribute="trailing" secondItem="TjO-oq-fM2" secondAttribute="trailing" constant="140" id="YYU-Bn-1QU"/>
+                            <constraint firstItem="XZu-Wb-2x2" firstAttribute="bottom" secondItem="dGD-Tn-eb0" secondAttribute="bottom" constant="200" id="nFI-M3-Fpn"/>
+                            <constraint firstItem="dgD-f7-3Mq" firstAttribute="leading" secondItem="XZu-Wb-2x2" secondAttribute="leading" constant="162" id="nJx-n1-PcQ"/>
+                            <constraint firstItem="TjO-oq-fM2" firstAttribute="leading" secondItem="XZu-Wb-2x2" secondAttribute="leading" constant="140" id="q1c-f2-Aut"/>
+                            <constraint firstItem="TjO-oq-fM2" firstAttribute="top" secondItem="dGD-Tn-eb0" secondAttribute="bottom" constant="40" id="xyi-48-eXq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="dGD-Tn-eb0" id="8di-tk-aa8"/>
+                        <outlet property="segmentControl" destination="TjO-oq-fM2" id="WqR-Cq-hih"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ImC-QG-D2j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-431.29770992366412" y="852.8169014084508"/>
         </scene>
         <!--Sound View Controller-->
         <scene sceneID="Wh4-Zd-VXr">
@@ -170,7 +233,7 @@
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2T-M2-w6v">
-                                <rect key="frame" x="163" y="717" width="68" height="35"/>
+                                <rect key="frame" x="162.66666666666666" y="717" width="68" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="BACK"/>
                                 <connections>
@@ -257,6 +320,7 @@
     </scenes>
     <resources>
         <image name="fish.png" width="256" height="256"/>
+        <image name="sample_image.png" width="548" height="853"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -19,6 +19,7 @@
 		6EA4B4FC2BB75E0100865355 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA4B4FB2BB75E0100865355 /* Message.swift */; };
 		6EA4B4FE2BB75E7F00865355 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA4B4FD2BB75E7F00865355 /* Chat.swift */; };
 		6EA4B5012BB75F3000865355 /* chatData.json in Resources */ = {isa = PBXBuildFile; fileRef = 6EA4B5002BB75F3000865355 /* chatData.json */; };
+		6EA4B5042BB7602300865355 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA4B5032BB7602300865355 /* ChatViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		6EA4B4FB2BB75E0100865355 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		6EA4B4FD2BB75E7F00865355 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		6EA4B5002BB75F3000865355 /* chatData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chatData.json; sourceTree = "<group>"; };
+		6EA4B5032BB7602300865355 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				6EA4B4C92BB632E800865355 /* ChatPortfollioApp.swift */,
 				6EA4B4F82BB75CAE00865355 /* Models */,
 				6EA4B4F72BB63BA000865355 /* Views */,
+				6EA4B5022BB7600000865355 /* ViewModels */,
 				6EA4B4FF2BB75EF800865355 /* DataServices */,
 				6EA4B4CD2BB632EA00865355 /* Assets.xcassets */,
 				6EA4B4CF2BB632EA00865355 /* Preview Content */,
@@ -164,6 +167,14 @@
 				6EA4B5002BB75F3000865355 /* chatData.json */,
 			);
 			path = DataServices;
+			sourceTree = "<group>";
+		};
+		6EA4B5022BB7600000865355 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6EA4B5032BB7602300865355 /* ChatViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EA4B4FA2BB75CE900865355 /* User.swift in Sources */,
+				6EA4B5042BB7602300865355 /* ChatViewModel.swift in Sources */,
 				6EA4B4FE2BB75E7F00865355 /* Chat.swift in Sources */,
 				6EA4B4F42BB635C700865355 /* ChatView.swift in Sources */,
 				6EA4B4FC2BB75E0100865355 /* Message.swift in Sources */,
